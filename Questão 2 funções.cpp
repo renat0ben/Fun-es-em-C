@@ -2,18 +2,22 @@
 #include<locale.h>
  
  void verifi (int n) {
- 	if(n%2==0){
- 		printf("%i é par", n);
+ 	if(n==0){
+ 		printf("%i Ã© neutro", n);
+	 }
+	 else if(n<0){
+	 	printf("%i Ã© negativo", n);
 	 }
 	 else{
-	 	printf("%i é impar", n);
+	 	printf("%i Ã© positivo", n);
 	 }
 }
-	int main(){
+int main(){
 	setlocale(LC_ALL, "Portuguese");
 	int n;
-	printf("Digite um número: \n");
+	printf("Digite um nÃºmero: \n");
 	scanf("%i", &n);
 	verifi(n);
 	return(0);
 }
+	
